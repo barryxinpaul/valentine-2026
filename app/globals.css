@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 350 30% 97%;
+    --foreground: 350 40% 15%;
+    --card: 350 40% 95%;
+    --card-foreground: 350 40% 15%;
+    --popover: 350 30% 97%;
+    --popover-foreground: 350 40% 15%;
+    --primary: 346 77% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 60% 92%;
+    --secondary-foreground: 350 40% 20%;
+    --muted: 350 20% 92%;
+    --muted-foreground: 350 15% 45%;
+    --accent: 346 60% 70%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 350 25% 88%;
+    --input: 350 25% 88%;
+    --ring: 346 77% 60%;
+    --radius: 1rem;
+    --rose-glow: 346 90% 65%;
+    --gold: 38 80% 55%;
+    --gold-foreground: 38 80% 20%;
+    --cream: 30 40% 96%;
+    --chart-1: 346 77% 60%;
+    --chart-2: 20 60% 55%;
+    --chart-3: 38 80% 55%;
+    --chart-4: 350 40% 45%;
+    --chart-5: 346 60% 70%;
+    --sidebar-background: 350 30% 97%;
+    --sidebar-foreground: 350 40% 15%;
+    --sidebar-primary: 346 77% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 350 20% 92%;
+    --sidebar-accent-foreground: 350 40% 15%;
+    --sidebar-border: 350 25% 88%;
+    --sidebar-ring: 346 77% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    cursor: url('/cursor-small.png'), auto;
+  }
+
+  button,
+  a,
+  [role="button"] {
+    cursor: url('/cursor-small.png'), pointer;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+
+  75% {
+    transform: translateY(-25px) rotate(3deg);
+  }
+}
+
+@keyframes sparkle {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(346 77% 60% / 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 40px hsl(346 77% 60% / 0.7), 0 0 60px hsl(346 77% 60% / 0.3);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.glass {
+  background: hsl(350 40% 95% / 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid hsl(350 25% 88% / 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
