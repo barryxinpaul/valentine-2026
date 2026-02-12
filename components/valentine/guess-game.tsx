@@ -15,7 +15,7 @@ interface Question {
 const questions: Question[] = [
   {
     id: 1,
-    image: "/mem1.jpg",
+    image: "/firstmet.jpg",
     question: "What day did we meet?",
     options: ["Jul 4th", "Jul 11th", "Jul 12th", "Jul 18th"],
     correctIndex: 1,

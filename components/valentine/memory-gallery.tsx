@@ -44,7 +44,7 @@ const memories: Memory[] = [
   },
   {
     id: 6,
-    src: "/bday.jpg",
+    src: "/birthday.jpg",
     caption: "22nd birthday",
     date: "11/22/2025",
   },
